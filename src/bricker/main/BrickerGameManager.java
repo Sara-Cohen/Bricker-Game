@@ -1,6 +1,8 @@
 package bricker.main;
 
+import bricker.brick_strategies.CollisionStrategy;
 import bricker.gameObject.AiPaddle;
+import bricker.gameObject.Brick;
 import bricker.gameObject.UserPaddle;
 import danogl.GameManager;
 import danogl.GameObject;
@@ -30,9 +32,9 @@ public class BrickerGameManager extends GameManager {
         Random rand = new Random();
         Renderable ballImage = imageReader.readImage("assets/ball.png", true);
         Sound soundColision = soundReader.readSound("assets/blop_cut_silenced.wav");
-        GameObject ball = new Ball(Vector2.ZERO, new Vector2(20 , 20), ballImage, soundColision);
+        GameObject ball = new Ball(Vector2.ZERO, new Vector2(20, 20), ballImage, soundColision);
         Vector2 windowDimensions = windowController.getWindowDimensions();
-        ball.setCenter(new Vector2(windowDimensions.x()/2,windowDimensions.y()-45));
+        ball.setCenter(new Vector2(windowDimensions.x() / 2, windowDimensions.y() - 45));
         float ballVelX = BALL_SPEED;
         float ballVelY = BALL_SPEED;
         if (rand.nextBoolean())
@@ -67,12 +69,21 @@ public class BrickerGameManager extends GameManager {
         GameObject wall = new GameObject(Vector2.LEFT, new Vector2(windowDimensions.x() * 2, 2), rectangleRenderable);
         wall.setCenter(new Vector2(windowDimensions.y(), 0));
         gameObjects().addGameObject(wall);
-//padlle
+
         //define background
 
-        GameObject background = new GameObject(Vector2.ZERO, windowController.getWindowDimensions(), imageReader.readImage("assets/DARK_BG2_small.jpeg", true));
+        GameObject background = new GameObject(Vector2.ZERO, windowController.getWindowDimensions(), imageReader.readImage("assets/DARK_BG2_small.jpeg", false));
         background.setCoordinateSpace(CoordinateSpace.CAMERA_COORDINATES);
         gameObjects().addGameObject(background, Layer.BACKGROUND);
+
+        //define bricks
+        Renderable brickImage = imageReader.readImage("assets/brick.png", false);
+        CollisionStrategy collisionStrategy = new CollisionStrategy(gameObjects());
+        GameObject brick = new Brick(Vector2.ZERO, new Vector2(windowDimensions.x(), 15), brickImage, collisionStrategy);
+        brick.setCenter(new Vector2(windowDimensions.x() / 2, 200));
+        gameObjects().addGameObject(brick, Layer.STATIC_OBJECTS);
+
+
     }
 
 
