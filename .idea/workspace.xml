@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1fa7e57-db9c-43cf-9c81-9f43c5d1ee77" name="Changes" comment="Defining the displacement of the ball and the paddle">
-      <change afterPath="$PROJECT_DIR$/src/bricker/brick_strategies/CollisionStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bricker/gameObject/Brick.java" afterDir="false" />
+    <list default="true" id="b1fa7e57-db9c-43cf-9c81-9f43c5d1ee77" name="Changes" comment="Defining the first break">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/gameObject/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/Bricker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/Brick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/gameObject/Brick.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/UserPaddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/gameObject/UserPaddle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bricker/main/BrickerGameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/main/BrickerGameManager.java" afterDir="false" />
     </list>
@@ -56,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702897411211</updated>
-      <workItem from="1702897412463" duration="39218000" />
+      <workItem from="1702897412463" duration="45588000" />
     </task>
     <task id="LOCAL‎-00001" summary="Defining the displacement of the ball and the paddle">
       <created>1702987856901</created>
@@ -65,7 +62,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1702987856901</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎-00002" summary="Defining the first break">
+      <created>1703024638588</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL‎-00002" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1703024638588</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +88,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Defining the displacement of the ball and the paddle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Defining the displacement of the ball and the paddle" />
+    <MESSAGE value="Defining the first break" />
+    <option name="LAST_COMMIT_MESSAGE" value="Defining the first break" />
   </component>
 </project>

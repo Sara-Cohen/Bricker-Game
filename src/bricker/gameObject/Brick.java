@@ -17,6 +17,7 @@ public class Brick extends GameObject {
     @Override
     public void onCollisionEnter(GameObject other, Collision collision) {
         super.onCollisionEnter(other, collision);
-        collisionStrategy.onCollision(this, other);
+        if (other instanceof Ball)
+            collisionStrategy.onCollision(this, other);
     }
 }

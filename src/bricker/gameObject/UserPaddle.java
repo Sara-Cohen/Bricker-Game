@@ -8,7 +8,7 @@ import danogl.util.Vector2;
 import java.awt.event.KeyEvent;
 
 public class UserPaddle extends GameObject {
-    private static final int MOVEMENT_SPEED = 300;
+    private static final int MOVEMENT_SPEED = 420;
     private static final int MIN_DISTANCE_FROM_SCREEN_EDGE = -60;
     private Vector2 topLeftCorner;
     private UserInputListener inputListener;
