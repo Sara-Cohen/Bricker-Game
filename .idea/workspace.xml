@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1fa7e57-db9c-43cf-9c81-9f43c5d1ee77" name="Changes" comment="Adding a loss notice and action accordingly">
-      <change afterPath="$PROJECT_DIR$/src/bricker/gameObject/Heart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/gameObject/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bricker/brick_strategies/CollisionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/brick_strategies/CollisionStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/Brick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/gameObject/Brick.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bricker/main/BrickerGameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/main/BrickerGameManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702897411211</updated>
-      <workItem from="1702897412463" duration="59508000" />
+      <workItem from="1702897412463" duration="64418000" />
     </task>
     <task id="LOCAL‎-00001" summary="Defining the displacement of the ball and the paddle">
       <created>1702987856901</created>
@@ -90,7 +90,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1703074052824</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL‎-00006" summary="Adding a loss notice and action accordingly">
+      <created>1703084787985</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL‎-00006" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1703084787985</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,5 +131,16 @@
     <MESSAGE value="Adding stones and breaking them" />
     <MESSAGE value="Adding a loss notice and action accordingly" />
     <option name="LAST_COMMIT_MESSAGE" value="Adding a loss notice and action accordingly" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/bricker/main/BrickerGameManager.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

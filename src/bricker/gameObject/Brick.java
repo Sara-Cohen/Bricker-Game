@@ -12,12 +12,14 @@ public class Brick extends GameObject {
     public Brick(Vector2 topLeftCorner, Vector2 dimensions, Renderable renderable, CollisionStrategy collisionStrategy) {
         super(topLeftCorner, dimensions, renderable);
         this.collisionStrategy = collisionStrategy;
+        this.collisionStrategy.setCountBricks();
     }
 
     @Override
     public void onCollisionEnter(GameObject other, Collision collision) {
         super.onCollisionEnter(other, collision);
-        if (other instanceof Ball)
+        if (other instanceof Ball) {
+
             collisionStrategy.onCollision(this, other);
-    }
+        }    }
 }

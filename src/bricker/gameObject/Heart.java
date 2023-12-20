@@ -26,17 +26,17 @@ public class Heart extends GameObject {
 
     public Heart(Vector2 topLeftCorner, Vector2 dimensions, Renderable renderable) {
         super(topLeftCorner, dimensions, renderable);
-            }
+    }
 
-    public void removeHeart(){
-        this.gameObjectsCollection.removeGameObject(arrHeart[numOfHeart-1]);
+    public void removeHeart() {
+        this.gameObjectsCollection.removeGameObject(arrHeart[numOfHeart - 1]);
         this.numOfHeart--;
 
     }
+
     public int GetNumOfHearts() {
         return this.numOfHeart;
     }
-
 
 
 }
