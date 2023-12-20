@@ -9,7 +9,7 @@ import danogl.util.Counter;
 public class CollisionStrategy {
 
     private final GameObjectCollection gameObjectsCollection;
-    private Counter countBricks = new Counter();
+    private int countBricks = 0;
 
     public CollisionStrategy(GameObjectCollection gameObjectCollection) {
         this.gameObjectsCollection = gameObjectCollection;
@@ -17,15 +17,15 @@ public class CollisionStrategy {
 
     public void onCollision(GameObject thisObj, GameObject otherObj) {
         gameObjectsCollection.removeGameObject(thisObj, Layer.STATIC_OBJECTS);
-        this.countBricks.decrement();
+        this.countBricks--;
 
     }
 
     public void setCountBricks() {
-        this.countBricks.increment();
+        this.countBricks++;
     }
 
     public int getCountBricks() {
-        return countBricks.value();
+        return countBricks;
     }
 }

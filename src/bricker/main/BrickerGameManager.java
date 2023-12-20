@@ -13,10 +13,11 @@ import danogl.util.Counter;
 import danogl.util.Vector2;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.Random;
+import java.util.Timer;
 
 public class BrickerGameManager extends GameManager {
-    private static final int NUM_OF_HEART = 1;
     private Ball ball;
     private Vector2 windowDimensions;
     private WindowController windowController;
@@ -24,16 +25,14 @@ public class BrickerGameManager extends GameManager {
     private UserPaddle userPaddle;
     private Brick brick;
     private CollisionStrategy collisionStrategy;
+    private boolean aBoolean = false;
 
     public BrickerGameManager(String windowTitle,
                               Vector2 windowDimensions) {
         super(windowTitle, windowDimensions);
     }
 
-
-    @Override
-    public void update(float deltaTime) {
-        super.update(deltaTime);
+    private void checkWinOrLose() {
         float ballHeight = ball.getCenter().y() - ball.getDimensions().y();
 
         String prompt = "";
@@ -41,9 +40,13 @@ public class BrickerGameManager extends GameManager {
             heart.removeHeart();
             userPaddle.setCenter(new Vector2(windowDimensions.x() / 2, (int) windowDimensions.y() - 30));
             ball.setCenter(new Vector2(windowDimensions.x() / 2, windowDimensions.y() - 45));
-            if (heart.GetNumOfHearts() == 0) {
-                prompt = "You lose!";
-            }
+
+        }
+        if (heart.GetNumOfHearts() == 0) {
+            prompt = "You lose!";
+        }
+        if (collisionStrategy.getCountBricks() == 0) {
+            prompt = "You win";
         }
         if (!prompt.isEmpty()) {
             prompt += " Do you want to play again?";
@@ -52,16 +55,13 @@ public class BrickerGameManager extends GameManager {
             else
                 windowController.closeWindow();
         }
-        if (collisionStrategy.getCountBricks() == 0) {
-            System.out.println("you winn");
-            if (prompt.isEmpty()) {
-                prompt += " Do you want to play again?";
-                if (windowController.openYesNoDialog(prompt))
-                    windowController.resetGame();
-                else
-                    windowController.closeWindow();
-            }
-        }
+
+    }
+
+    @Override
+    public void update(float deltaTime) {
+        super.update(deltaTime);
+        checkWinOrLose();
     }
 
 
@@ -85,9 +85,13 @@ public class BrickerGameManager extends GameManager {
         float ballVelY = BALL_SPEED;
         if (rand.nextBoolean())
             ballVelY *= -1;
+        if (rand.nextBoolean())
+            ballVelX *= -1;
 
-        ball.setVelocity(new Vector2(ballVelX, ballVelY));
+
         ball.setCenter(new Vector2(windowDimensions.x() / 2, windowDimensions.y() - 45));
+//        if (inputListener.isKeyPressed(KeyEvent.VK_SPACE))
+            ball.setVelocity(new Vector2(ballVelX, ballVelY));
         gameObjects().addGameObject(ball);
         //Define paddle
         Renderable paddleImage = imageReader.readImage("assets/paddle.png", true);
@@ -118,7 +122,7 @@ public class BrickerGameManager extends GameManager {
         Renderable brickImage = imageReader.readImage("assets/brick.png", false);
         collisionStrategy = new CollisionStrategy(gameObjects());
         float width = (windowDimensions.x() / 8);
-        for (int j = 0; j < 5; j++) {
+        for (int j = 0; j <5; j++) {
             for (int i = 0; i < 8; i++) {
                 brick = new Brick(Vector2.ZERO, new Vector2(windowDimensions.x() / 8, 20), brickImage, collisionStrategy);
                 brick.setCenter(new Vector2(i * width + width / 2, 10 + 21 * j));
@@ -126,6 +130,8 @@ public class BrickerGameManager extends GameManager {
             }
         }
         //define heart
+        final int NUM_OF_HEART = 3;
+
         Renderable imageHeart = imageReader.readImage("assets/heart.png", true);
         heart = new Heart(Vector2.ZERO, new Vector2(20, 20), imageHeart, gameObjects(), NUM_OF_HEART);
 
