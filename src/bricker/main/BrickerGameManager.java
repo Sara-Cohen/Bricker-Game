@@ -75,7 +75,6 @@ public class BrickerGameManager extends GameManager {
         //define bricks
         Renderable brickImage = imageReader.readImage("assets/brick.png", false);
         CollisionStrategy collisionStrategy = new CollisionStrategy(gameObjects());
-//        GameObject brick = new Brick(Vector2.ZERO, new Vector2(windowDimensions.x()/8, 15), brickImage, collisionStrategy);
        float width= (windowDimensions.x()/8);
        for (int j  =0;j<5;j++) {
            for (int i = 0; i < 8; i++) {
@@ -84,13 +83,7 @@ public class BrickerGameManager extends GameManager {
                gameObjects().addGameObject(brick, Layer.STATIC_OBJECTS);
            }
        }
-//        brick.setCenter(new Vector2(width, 200));
-//        gameObjects().addGameObject(brick, Layer.STATIC_OBJECTS);
-//        brick.setCenter(new Vector2(width*2, 200));
-//        gameObjects().addGameObject(brick, Layer.STATIC_OBJECTS);
 
-//        brick.setCenter(new Vector2(windowDimensions.x() / 2, 200));
-//        gameObjects().addGameObject(brick, Layer.STATIC_OBJECTS);
 
 
     }
