@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1fa7e57-db9c-43cf-9c81-9f43c5d1ee77" name="Changes" comment="Adding stones and breaking them">
+    <list default="true" id="b1fa7e57-db9c-43cf-9c81-9f43c5d1ee77" name="Changes" comment="Adding a loss notice and action accordingly">
+      <change afterPath="$PROJECT_DIR$/src/bricker/gameObject/Heart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/gameObject/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bricker/main/BrickerGameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/main/BrickerGameManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +42,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "Errors"
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -51,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702897411211</updated>
-      <workItem from="1702897412463" duration="49526000" />
+      <workItem from="1702897412463" duration="59508000" />
     </task>
     <task id="LOCAL‎-00001" summary="Defining the displacement of the ball and the paddle">
       <created>1702987856901</created>
@@ -81,11 +83,29 @@
       <option name="project" value="LOCAL‎" />
       <updated>1703070308524</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL‎-00005" summary="Adding a loss notice and action accordingly">
+      <created>1703074052824</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL‎-00005" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1703074052824</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -102,17 +122,7 @@
     <MESSAGE value="Defining the displacement of the ball and the paddle" />
     <MESSAGE value="Defining the first break" />
     <MESSAGE value="Adding stones and breaking them" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding stones and breaking them" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/bricker/main/BrickerGameManager.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Adding a loss notice and action accordingly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding a loss notice and action accordingly" />
   </component>
 </project>
