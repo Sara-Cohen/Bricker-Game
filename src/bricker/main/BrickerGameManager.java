@@ -18,30 +18,56 @@ import java.awt.*;
 import java.util.Random;
 
 public class BrickerGameManager extends GameManager {
-    private static final int BALL_SPEED = 250;
+   private GameObject ball;
+    private Vector2 windowDimensions;
+    private WindowController windowController;
 
     public BrickerGameManager(String windowTitle, Vector2 windowDimensions) {
         super(windowTitle, windowDimensions);
     }
 
+
     @Override
-    public void initializeGame(ImageReader imageReader, SoundReader soundReader, UserInputListener inputListener, WindowController windowController) {
+    public void update(float deltaTime) {
+        super.update(deltaTime);
+        double ballHeight = ball.getCenter().y()-ball.getDimensions().y();
+        String prompt = "";
+        if (ballHeight > windowDimensions.y())
+            prompt = "you lose";
+        if (!prompt.isEmpty()) {
+            prompt += " play again?";
+            if (windowController.openYesNoDialog(prompt))
+                windowController.resetGame();
+            else
+                windowController.closeWindow();
+        }
+    }
+
+    @Override
+    public void initializeGame(ImageReader imageReader,
+                               SoundReader soundReader,
+                               UserInputListener inputListener,
+                               WindowController windowController) {
+
         super.initializeGame(imageReader, soundReader, inputListener, windowController);
+        this.windowController = windowController;
+        this.windowDimensions = windowController.getWindowDimensions();
 
         //Define ball:
-        Random rand = new Random();
+       final int BALL_SPEED = 250;
+
         Renderable ballImage = imageReader.readImage("assets/ball.png", true);
         Sound soundColision = soundReader.readSound("assets/blop_cut_silenced.wav");
-        GameObject ball = new Ball(Vector2.ZERO, new Vector2(20, 20), ballImage, soundColision);
-        Vector2 windowDimensions = windowController.getWindowDimensions();
-        ball.setCenter(new Vector2(windowDimensions.x() / 2, windowDimensions.y() - 45));
+        ball = new Ball(Vector2.ZERO, new Vector2(20, 20), ballImage, soundColision);
+        Random rand = new Random();
         float ballVelX = BALL_SPEED;
         float ballVelY = BALL_SPEED;
-        if (rand.nextBoolean())
-            ballVelX *= -1;
+//        if (rand.nextBoolean())
+//            ballVelX *= -1;
         if (rand.nextBoolean())
             ballVelY *= -1;
         ball.setVelocity(new Vector2(ballVelX, ballVelY));
+        ball.setCenter(new Vector2(windowDimensions.x() / 2, windowDimensions.y() - 45));
         gameObjects().addGameObject(ball);
 
 
@@ -75,15 +101,14 @@ public class BrickerGameManager extends GameManager {
         //define bricks
         Renderable brickImage = imageReader.readImage("assets/brick.png", false);
         CollisionStrategy collisionStrategy = new CollisionStrategy(gameObjects());
-       float width= (windowDimensions.x()/8);
-       for (int j  =0;j<5;j++) {
-           for (int i = 0; i < 8; i++) {
-               GameObject brick = new Brick(Vector2.ZERO, new Vector2(windowDimensions.x() / 8, 20), brickImage, collisionStrategy);
-               brick.setCenter(new Vector2(i * width + width / 2, 10+21*j));
-               gameObjects().addGameObject(brick, Layer.STATIC_OBJECTS);
-           }
-       }
-
+        float width = (windowDimensions.x() / 8);
+        for (int j = 0; j < 5; j++) {
+            for (int i = 0; i < 8; i++) {
+                GameObject brick = new Brick(Vector2.ZERO, new Vector2(windowDimensions.x() / 8, 20), brickImage, collisionStrategy);
+                brick.setCenter(new Vector2(i * width + width / 2, 10 + 21 * j));
+                gameObjects().addGameObject(brick, Layer.STATIC_OBJECTS);
+            }
+        }
 
 
     }
