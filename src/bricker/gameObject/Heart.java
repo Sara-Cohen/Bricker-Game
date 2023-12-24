@@ -29,14 +29,18 @@ public class Heart extends GameObject {
     }
 
     public void removeHeart() {
+        if(numOfHeart==1)
+            this.arrHeart[0].setCenter(new Vector2(-50, -50));
         this.gameObjectsCollection.removeGameObject(arrHeart[numOfHeart - 1]);
         this.numOfHeart--;
-
     }
 
     public int GetNumOfHearts() {
         return this.numOfHeart;
     }
 
-
+    @Override
+    public void update(float deltaTime) {
+        super.update(deltaTime);
+    }
 }

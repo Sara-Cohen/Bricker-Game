@@ -19,7 +19,7 @@ public class Brick extends GameObject {
     public void onCollisionEnter(GameObject other, Collision collision) {
         super.onCollisionEnter(other, collision);
         if (other instanceof Ball) {
-
             collisionStrategy.onCollision(this, other);
-        }    }
+        }
+    }
 }

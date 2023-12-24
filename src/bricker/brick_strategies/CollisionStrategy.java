@@ -4,6 +4,7 @@ import danogl.GameObject;
 import danogl.collisions.GameObjectCollection;
 import danogl.collisions.Layer;
 import danogl.util.Counter;
+import danogl.util.Vector2;
 
 
 public class CollisionStrategy {
@@ -16,9 +17,10 @@ public class CollisionStrategy {
     }
 
     public void onCollision(GameObject thisObj, GameObject otherObj) {
-        gameObjectsCollection.removeGameObject(thisObj, Layer.STATIC_OBJECTS);
+        if(countBricks==1)
+            thisObj.setCenter(new Vector2(-50, -50));
+        this.gameObjectsCollection.removeGameObject(thisObj);
         this.countBricks--;
-
     }
 
     public void setCountBricks() {

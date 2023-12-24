@@ -7,14 +7,14 @@ import danogl.util.Vector2;
 
 import java.awt.event.KeyEvent;
 
-public class UserPaddle extends GameObject {
+public class Paddle extends GameObject {
     private static final int MOVEMENT_SPEED = 420;
     private static final int MIN_DISTANCE_FROM_SCREEN_EDGE = -60;
     private Vector2 topLeftCorner;
     private UserInputListener inputListener;
     private Vector2 windowDimensions;
 
-    public UserPaddle(Vector2 topLeftCorner, Vector2 dimensions, Renderable renderable, UserInputListener inputListener, Vector2 windowDimensions) {
+    public Paddle(Vector2 topLeftCorner, Vector2 dimensions, Renderable renderable, UserInputListener inputListener, Vector2 windowDimensions) {
         super(topLeftCorner, dimensions, renderable);
 
         this.inputListener = inputListener;

@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b1fa7e57-db9c-43cf-9c81-9f43c5d1ee77" name="Changes" comment="Victory check and action accordingly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/heart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bricker/brick_strategies/CollisionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/brick_strategies/CollisionStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/AiPaddle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/Brick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/gameObject/Brick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/Heart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/gameObject/Heart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bricker/gameObject/UserPaddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/gameObject/Paddle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bricker/main/BrickerGameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bricker/main/BrickerGameManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,20 +35,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "OverrideImplement.combined": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Users/user/programs/java/Bricker/assets",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.completion"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;OverrideImplement.combined&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/user/programs/java/Bricker/assets&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +57,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702897411211</updated>
-      <workItem from="1702897412463" duration="70526000" />
+      <workItem from="1702897412463" duration="71390000" />
+      <workItem from="1703102264601" duration="7733000" />
+      <workItem from="1703147430504" duration="8540000" />
+      <workItem from="1703189646775" duration="1274000" />
+      <workItem from="1703421064488" duration="121000" />
     </task>
     <task id="LOCAL‎-00001" summary="Defining the displacement of the ball and the paddle">
       <created>1702987856901</created>
@@ -103,7 +112,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1703092954691</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL‎-00008" summary="Victory check and action accordingly">
+      <created>1703100490944</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL‎-00008" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1703100490944</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
